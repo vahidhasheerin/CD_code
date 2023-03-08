@@ -88,15 +88,15 @@ resource "aws_instance" "webservers" {
   }
 
   provisioner "file" {
-    source      = "/home/ubuntu/vahidha/terraform/terraform_demo/tf-k8s/k8_package.zip"
+    source      = "/home/administrator/vahidha/test_PIPELINE/k8_package.zip"
     destination = "/tmp/k8_package.zip"
   }
   provisioner "file" {
-    source      = "/home/ubuntu/vahidha/terraform/terraform_demo/tf-k8s/install.sh"
+    source      = "/home/administrator/Jenkins/workspace/test_PIPELINE_CD/install.sh"
     destination = "/tmp/install.sh"
   }
   provisioner "file" {
-    source      = "mykey"
+    source      = "/home/administrator/Jenkins/workspace/test_PIPELINE_CDmykey"
     destination = "/tmp/mykey"
   }
   provisioner "remote-exec" {
