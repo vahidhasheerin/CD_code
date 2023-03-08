@@ -96,7 +96,7 @@ resource "aws_instance" "webservers" {
     destination = "/tmp/install.sh"
   }
   provisioner "file" {
-    source      = "/home/administrator/Jenkins/workspace/test_PIPELINE_CDmykey"
+    source      = "/home/administrator/Jenkins/workspace/test_PIPELINE_CD/mykey"
     destination = "/tmp/mykey"
   }
   provisioner "remote-exec" {
