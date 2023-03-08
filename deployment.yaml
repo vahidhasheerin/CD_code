@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: timer-app
+  name: timer-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: timer-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: timer-app
+    spec:
+      containers:
+      - image: vahidha22/timer:v1
+        name: timer
+        resources: {}
+status: {}
